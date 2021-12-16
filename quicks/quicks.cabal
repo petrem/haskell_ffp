@@ -1,0 +1,60 @@
+name:                quicks
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/petrem/quicks#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Petre Mierluțiu
+maintainer:          petrem@github
+copyright:           Public Domain
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+library
+  exposed-modules:
+    Quicks , Split
+  hs-source-dirs:
+    src
+  build-depends:
+      QuickCheck
+    , base >= 4.7 && < 5
+  default-language: Haskell2010
+
+test-suite quicks-test
+    type: exitcode-stdio-1.0
+    main-is: Spec.hs
+    hs-source-dirs:
+      test
+    build-depends:
+        QuickCheck
+      , base >=4.7 && < 5
+      , hspec
+      , quicks
+    default-language: Haskell2010
+
+test-suite split-test
+    type: exitcode-stdio-1.0
+    main-is: SpecSplit.hs
+    hs-source-dirs:
+      test
+    build-depends:
+        QuickCheck
+      , base >=4.7 && < 5
+      , hspec
+      , quicks
+    default-language: Haskell2010
+
+test-suite idempotence-test
+    type: exitcode-stdio-1.0
+    main-is: SpecIdempotence.hs
+    hs-source-dirs:
+      test
+    build-depends:
+        QuickCheck
+      , base >=4.7 && < 5
+      , hspec
+      , quicks
+    default-language: Haskell2010

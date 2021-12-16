@@ -1,0 +1,42 @@
+name:                cipher
+version:             0.1.0.0
+-- synopsis:
+-- description:
+homepage:            https://github.com/petrem/cipher#readme
+license:             BSD3
+license-file:        LICENSE
+author:              Petre Mierluțiu
+maintainer:          petrem@github
+copyright:           Public Domain
+category:            Web
+build-type:          Simple
+cabal-version:       >=1.10
+extra-source-files:  README.md
+
+executable cipher
+  hs-source-dirs:      app
+  main-is:             Main.hs
+  default-language:    Haskell2010
+  build-depends:       base >= 4.7 && < 5
+                     , cipher
+
+library
+  exposed-modules:
+      Cipher
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite chipher-test
+   type: exitcode-stdio-1.0
+   main-is: Spec.hs
+   hs-source-dirs:
+     test
+   build-depends:
+       QuickCheck
+     , base >= 4.7 && < 5
+     , hspec
+     , cipher
+   default-language: Haskell2010
