@@ -1,5 +1,7 @@
 module Lib where
 
+-- Cap 21 - Traversable
+
 import Control.Applicative
 import Control.Monad (replicateM)
 
