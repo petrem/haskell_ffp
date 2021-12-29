@@ -30,7 +30,7 @@ class Applicative f => Monad f where
   return :: a -> f a
   (>>=) :: f a -> (a -> f b) -> f b
 
--- Note in general we can't simply get Monad from Applicative
+  -- Note in general we can't simply get Monad from Applicative
 -- but this is a specific instance
 instance Monad ((->) r) where
   return = pure

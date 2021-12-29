@@ -66,6 +66,7 @@ instance Functor (Reader r) where
 instance Applicative (Reader r) where
   pure :: a -> Reader r a
   pure = Reader . const
+  --pure a = Reader $ (\_ -> a)
 
   (<*>) :: Reader r (a -> b) -> Reader r a -> Reader r b
   Reader rab <*> Reader ra = Reader $ \r -> rab r (ra r)
@@ -78,7 +79,8 @@ instance Monad (Reader r) where
     Reader $ \r -> runReader (aRrb (ra r)) r
 
 join :: Reader r (Reader r a) -> Reader r a
-join (Reader rRra) = Reader $ \r -> runReader (rRra r) r
+--join (Reader rRra) = Reader $ \r -> runReader (rRra r) r
+join rrRra = rrRra >>= id
 
 --
 
