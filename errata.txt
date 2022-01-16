@@ -1,0 +1,4 @@
+Note: pages from screen version
+
+- 23.8 Chapter exercises, exercise 5, p. 891
+  runState f >> f 0  --->  runState (f >> f) 0
