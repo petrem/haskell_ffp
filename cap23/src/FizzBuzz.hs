@@ -31,7 +31,7 @@ fizzBuzzList :: [Integer] -> [String]
 fizzBuzzList xs = execState (mapM_ addSolution xs) []
 
 printStateFB :: IO ()
-printStateFB = mapM_ putStrLn (reverse $  fizzBuzzList [1..100])
+printStateFB = mapM_ putStrLn (reverse $ fizzBuzzList [1..100])
 
 
 -- State fizzBuzz, using DList

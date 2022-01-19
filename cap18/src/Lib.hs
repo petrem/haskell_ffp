@@ -249,7 +249,9 @@ instance Monad List where
 --
 
 j :: Monad m => m (m a) -> m a
-j = join
+-- j = join
+-- (>>=) :: Monad m => m (m a) -> (m a -> m b) -> m b
+j u = u >>= id
 
 --
 
