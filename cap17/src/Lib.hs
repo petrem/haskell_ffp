@@ -196,6 +196,7 @@ instance Functor (Validation e) where
 
 instance Monoid e => Applicative (Validation e) where
   pure = Success
+  Failure f <*> _ = Failure f
   Failure err1 <*> Failure err2 = Failure (err1 <> err2)
   Failure err <*> Success _ = Failure err
   Success _ <*> Failure err = Failure err

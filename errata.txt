@@ -2,3 +2,12 @@ Note: pages from screen version
 
 - 23.8 Chapter exercises, exercise 5, p. 891
   runState f >> f 0  --->  runState (f >> f) 0
+
+- 24.3 Parsing practice, exercise 2, p. 904
+  * Are we supposed to write a parser (:: Parser String), or a function
+    taking a string and parsing it? Following the example it has type
+    'p123 :: String -> IO ()' or perhaps 'p123 :: String -> Result String' (see next bullet too)
+  * Example outputs Success 123 ---> Success "123"
+
+- 24 Failure and Backtracking, p. 941
+  * Descriptions and code are misaligned, e.g. "Helper function for attoparsec—same deal as before:" is followed by nobackParse instead of attoP which is before it.
