@@ -56,4 +56,5 @@ main = do
           print m
           r' `shouldBe` expected'
 
-    semVerSpecs
+    semVerParseSpecs
+    semVerOrdSpecs
