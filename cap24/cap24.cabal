@@ -33,6 +33,7 @@ library
       SillyIni
       Text.Decimal
       Text.Fractions
+      Text.Integrals
       Text.Naturals
   other-modules:
       Paths_cap24
