@@ -90,7 +90,7 @@ parseLabel :: (Monad f, CharParsing f) => f Label
 parseLabel = NumLabel <$> try numericIdentifier <|> NonNumLabel <$> identifier
 
 numericIdentifier :: (Monad f, CharParsing f) => f Integer
-numericIdentifier = read <$> (try (nonNullDigit >>= \d -> (d:) <$> many digit) <|> string "0")
+numericIdentifier = read <$> (try ((:) <$> nonNullDigit <*> many digit) <|> string "0")
 
 identifier :: (Monad f, CharParsing f) => f String
 identifier = some $ alphaNum <|> char '-'

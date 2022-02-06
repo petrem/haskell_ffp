@@ -35,6 +35,7 @@ library
       Text.Fractions
       Text.Integrals
       Text.Naturals
+      Text.PhoneNumbers
   other-modules:
       Paths_cap24
   hs-source-dirs:
