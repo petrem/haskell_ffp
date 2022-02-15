@@ -28,6 +28,7 @@ library
       AltParsing
       BT
       Lib
+      Log
       Marsh
       SemVer
       SillyIni
@@ -51,6 +52,7 @@ library
     , raw-strings-qq
     , scientific
     , text
+    , time
     , transformers
     , trifecta
   default-language: Haskell2010

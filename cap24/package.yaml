@@ -34,6 +34,7 @@ library:
     - raw-strings-qq
     - scientific
     - text
+    - time
     - transformers
     - trifecta
 
