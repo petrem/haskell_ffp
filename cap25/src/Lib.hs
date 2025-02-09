@@ -170,3 +170,4 @@ instance (Monad f, Monad g) => Monad (Compose f g) where
 
 
 
+x = 1 + 2

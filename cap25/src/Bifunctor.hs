@@ -76,3 +76,7 @@ instance Functor (Buridan a) where
 instance Bifunctor Buridan where
   bimap f _ (Water a) = Water (f a)
   bimap _ g (Hay b) = Hay (g b)
+
+-- eval plugin rules
+-- >>> map (+1) [1,2,3]
+-- [2,3,4]
